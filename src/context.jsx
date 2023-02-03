@@ -21,7 +21,7 @@ const fetchMeals = async (url) => {
 }
 
   useEffect(() => {
-    fetchData(allMealsUrl)
+    fetchMeals(allMealsUrl)
   }, [])
   
   return <AppContext.Provider value={{name: 'John', role: 'student'}}>
