@@ -1,8 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+
+  useEffect(() => {
+    console.log('fetch data here')
+  }, [])
   
   return <AppContext.Provider value={{name: 'John', role: 'student'}}>
     {children}
