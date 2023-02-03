@@ -13,10 +13,10 @@ const AppProvider = ({ children }) => {
 
 const fetchMeals = async (url) => {
   try {
-    const response = await axios(url)
-    console.log(response.data)
+    const {data} = await axios(url)
+    console.log(data)
   } catch (error) {
-      console.log(error.response)
+      console.log(error.request)
   }
 }
 
